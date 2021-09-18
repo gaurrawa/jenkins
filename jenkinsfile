@@ -1,0 +1,10 @@
+pipeline{
+    agent any
+    stages{
+        stage("gitcheckout"){
+            steps{
+                git branch: 'testing', credentialsId: 'pythonpipeline', url: 'https://github.com/gaurrawa/jenkins.git'
+            }
+        }
+    }
+}
